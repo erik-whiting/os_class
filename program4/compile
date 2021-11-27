@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Clean up
+rm *.o
+rm *ifo*
+
+# Create object files:
+gcc -Wall -c data_structures.c server.c client.c
+
+# Compile client and server
+gcc -o server server.o data_structures.o
+gcc -o client client.o data_structures.o
+

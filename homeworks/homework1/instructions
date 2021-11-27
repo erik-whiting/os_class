@@ -1,0 +1,6 @@
+Copy firstTest.c from your Code folder into a puTTY session (i for insert mode then right click to copy) then save it (ESC then :wq).
+Modify the program so that it gets two integers (use %d for a number, and put the ampersand in front of your number variable for scanf) from the keyboard, adds them and prints the numbers and the sum to the screen with a label, e.g. "The sum of 56 and -12 is 44"
+Compile the program (gcc secondTest.c -o outputName)   - if you get a compile warning, go ahead and execute the program
+Run the program (./outputName)
+Capture your output (make sure that your name is printed or that it shows up on the prompt)
+Submit the output to Blackboard

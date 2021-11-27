@@ -1,0 +1,42 @@
+This repository comes with a bash script called `compile.sh` which
+will compile the program as needed.
+
+PLEASE use the command (without the "$>"):
+```
+$> bash compile.sh
+```
+to compile this assignment. There are two files called 
+`data_structures.h` and `data_structures.c` which contain
+struct definitions shared by both `client.c` and `server.c`.
+The bash script compiles these altogether properly
+so the grader doesn't have to figure out how to link them.
+
+Run the program `server` first, then run three instances of
+`client`. If you want to run more or less client instances,
+change the value of `MAX_REQUESTS` in `server.c`. 
+
+For the grader's convenience, both the `server` and `client`
+programs output a lot of information. The client
+will output its request ID, request size, and
+burst time, all of which are generated randomly.
+
+After the client requests have been processed, the
+`client` will also output the server response, including
+how many frames were allocated, the fragmentation of the
+last frame, and the completion time of the request.
+
+The `server` program will start by outputting its
+total frames, size of memory per frame, and the
+total amount of memory available (this number doesn't
+really matter for anything). 
+
+As `client` requests hit the `server`, the `server` will
+output how many units of memory the request is asking
+for, its burst time, and how many frames will be allocated.
+
+Once the `server` has three `requests` or is at 80% memory
+capacity, it will begin executing the requests. As it
+does so, it will output which request it is executing
+as well as its currently available resources. This way,
+the grader can see the memory is being allocated back
+once a request has been executed.
